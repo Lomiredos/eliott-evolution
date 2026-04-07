@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libeliott-ecs.a "CMakeFiles/eliott-ecs.dir/src/EntityManager.cpp.obj"
+C:\msys64\mingw64\bin\ranlib.exe libeliott-ecs.a

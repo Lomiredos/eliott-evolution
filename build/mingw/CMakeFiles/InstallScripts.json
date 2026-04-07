@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Dev/eliott-engine-projects/eliott-evolution/build/mingw/cmake_install.cmake",
+		"C:/Dev/eliott-engine-projects/eliott-evolution/build/mingw/extern/eliott-ecs/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
