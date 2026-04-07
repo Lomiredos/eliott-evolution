@@ -9,7 +9,7 @@ enum class DetectedType{
 };
 
 struct Ray{
-float maxRange;  
+    float maxRange;  
     float rotation;   
     float distance;   
     DetectedType detected;
