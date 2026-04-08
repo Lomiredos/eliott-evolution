@@ -136,6 +136,8 @@ void createEntity(ee::ecs::World& world, std::shared_ptr<SimulationSystem> simSy
 
 int main()
 {
+
+    float timeScale = 5.f;
     //sf part
     sf::RenderWindow window =  sf::RenderWindow(sf::VideoMode({1280u, 720u}), "Evolution");
     window.setFramerateLimit(60);
@@ -162,11 +164,14 @@ int main()
     world.flushDestructions();
 
 
+    float scaledDt = dt * timeScale;
+    
     //update
-    sys.vision->update(world, dt);
-    sys.neural->update(world, dt);
-    sys.move->update(world, dt);
-    sys.sim->update(world, dt);
+    sys.vision->update(world, scaledDt);
+    sys.neural->update(world, scaledDt);
+    sys.move->update(world, scaledDt);
+    sys.sim->update(world, scaledDt);
+
 
     //draw
     window.clear();

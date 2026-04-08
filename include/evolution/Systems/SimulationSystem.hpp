@@ -26,6 +26,9 @@ private:
     float m_timer = 0.f;            
     int m_generation = 0;  
 
+    std::vector<float> m_fitnessMax;
+    std::vector<float> m_fitnessMin;
+
 public:
     SimulationSystem(): m_rng(std::random_device{}()), m_dist(-1.0f, 1.0f) {}
 
@@ -84,6 +87,15 @@ public:
         return nn;
     }
 
+
+
+int getGeneration() const { return m_generation; }
+float getTimer() const { return m_timer; }
+float getGenerationTime() const { return m_generationTime; }
+std::vector<float> getFitnessMax() const { return m_fitnessMax; }
+std::vector<float> getFitnessMin() const { return m_fitnessMin; }
+
+
 private:
     float getDistance(const sf::Vector2f& a, const sf::Vector2f& b) const {
         return sqrt((a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y));
@@ -103,6 +115,9 @@ private:
     {
         return _world.getComponent<NeuralNetwork>(a).fitness > _world.getComponent<NeuralNetwork>(b).fitness;  
     });
+
+    m_fitnessMax.push_back(_world.getComponent<NeuralNetwork>(creatureID[0]).fitness);
+    m_fitnessMin.push_back(_world.getComponent<NeuralNetwork>(creatureID[creatureID.size() -1 ]).fitness);
 
 
     int nbParents = std::max(1, (int)(creatureID.size() * 0.1f));
