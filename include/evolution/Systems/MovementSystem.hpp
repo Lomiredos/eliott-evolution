@@ -20,7 +20,7 @@ class MovementSystem : public  ee::ecs::System {
             Motion& motion = _world.getComponent<Motion>(id);
 
             float dx = cos(motion.direction);
-            float dy = sin(motion.direction);
+            float dy = -sin(motion.direction);
 
             sf::Vector2f dir = sf::Vector2f(dx, dy);
             sf::Vector2f movement = dir * motion.speed * _dt;

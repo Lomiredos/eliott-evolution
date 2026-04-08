@@ -23,8 +23,6 @@ public:
 
     }
 
-private:
-
 
     NeuralNetwork createRandom(const std::vector<int>& _topology) {
         NeuralNetwork nn;
