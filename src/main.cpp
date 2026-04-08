@@ -16,6 +16,8 @@
 #include "evolution/Systems/SimulationSystem.hpp"
 #include "evolution/Systems/TagsSystems.hpp"
 #include "evolution/Systems/VisionSystem.hpp"
+#include "evolution/Species/Species.hpp"
+#include "evolution/Species/SpeciesSerializer.hpp"
 
 struct Systems {
     std::shared_ptr<MovementSystem> move;
@@ -48,7 +50,7 @@ Systems setUpSystem(ee::ecs::World& world){
     auto simSys = world.registerSystem<SimulationSystem>();
     simSys->init(foodSys);
 
-Systems sys{moveSys, visionSys, neuralSys, simSys, foodSys, wallSys};
+    Systems sys{moveSys, visionSys, neuralSys, simSys, foodSys, wallSys};
 
     ee::ecs::Signature sig;
     sig.set(ee::ecs::getComponentID<Transform>());
@@ -76,8 +78,8 @@ Systems sys{moveSys, visionSys, neuralSys, simSys, foodSys, wallSys};
     world.setSystemSignature<WallSystem>(sig);
 
     sig.reset();
-sig.set(ee::ecs::getComponentID<NeuralNetwork>());
-world.setSystemSignature<SimulationSystem>(sig);
+    sig.set(ee::ecs::getComponentID<NeuralNetwork>());
+    world.setSystemSignature<SimulationSystem>(sig);
 
 
     return sys;
@@ -186,10 +188,22 @@ int main()
     float scaledDt = dt * timeScale;
     
     //update
+    int genBefore = sys.sim->getGeneration();
     sys.vision->update(world, scaledDt);
     sys.neural->update(world, scaledDt);
     sys.move->update(world, scaledDt);
     sys.sim->update(world, scaledDt);
+
+    // sauvegarde automatique quand une nouvelle generation commence
+    if (sys.sim->getGeneration() > genBefore) {
+        Species s;
+        s.name       = "Kobolt";
+        s.generation = sys.sim->getGeneration();
+        s.fitnessMax = sys.sim->getFitnessMax();
+        s.fitnessMin = sys.sim->getFitnessMin();
+        s.bestBrain  = sys.sim->getBestBrain();
+        SpeciesSerializer::save(s, "../../species/kobolt.json");
+    }
 
 
     //draw

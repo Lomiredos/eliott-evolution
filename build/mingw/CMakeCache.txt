@@ -358,6 +358,9 @@ eliott-evolution_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 eliott-evolution_SOURCE_DIR:STATIC=C:/Dev/eliott-engine-projects/eliott-evolution
 
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=C:/Dev/vcpkg/installed/x64-mingw-static/share/nlohmann_json
+
 
 ########################
 # INTERNAL cache entries
@@ -533,6 +536,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[optimized;C:/Dev/vcpkg/installed/x64-
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
 FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/Dev/vcpkg/installed/x64-mingw-static/lib/libzlib.a;debug;C:/Dev/vcpkg/installed/x64-mingw-static/debug/lib/libzlibd.a][C:/Dev/vcpkg/installed/x64-mingw-static/include][ ][v1.3.1()]
+//Details about finding nlohmann_json
+FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[C:/Dev/vcpkg/installed/x64-mingw-static/share/nlohmann_json/nlohmann_jsonConfig.cmake][v3.12.0()]
 //ADVANCED property for variable: FREETYPE_LIBRARY_DEBUG
 FREETYPE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //vcpkg

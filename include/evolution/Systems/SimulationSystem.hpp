@@ -28,6 +28,7 @@ private:
 
     std::vector<float> m_fitnessMax;
     std::vector<float> m_fitnessMin;
+    NeuralNetwork m_bestBrain;
 
 public:
     SimulationSystem(): m_rng(std::random_device{}()), m_dist(-1.0f, 1.0f) {}
@@ -94,6 +95,7 @@ float getTimer() const { return m_timer; }
 float getGenerationTime() const { return m_generationTime; }
 std::vector<float> getFitnessMax() const { return m_fitnessMax; }
 std::vector<float> getFitnessMin() const { return m_fitnessMin; }
+const NeuralNetwork& getBestBrain() const { return m_bestBrain; }
 
 
 private:
@@ -118,6 +120,7 @@ private:
 
     m_fitnessMax.push_back(_world.getComponent<NeuralNetwork>(creatureID[0]).fitness);
     m_fitnessMin.push_back(_world.getComponent<NeuralNetwork>(creatureID[creatureID.size() -1 ]).fitness);
+    m_bestBrain = _world.getComponent<NeuralNetwork>(creatureID[0]);
 
 
     int nbParents = std::max(1, (int)(creatureID.size() * 0.1f));

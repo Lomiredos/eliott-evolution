@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(SFML CONFIG REQUIRED Graphics Window System)
+find_package(nlohmann_json CONFIG REQUIRED)
+
 
 add_subdirectory(extern/eliott-ecs)
 
@@ -21,4 +23,5 @@ target_include_directories(eliott-evolution PUBLIC
 target_link_libraries(eliott-evolution PUBLIC
     SFML::Graphics
     eliott-ecs
+    nlohmann_json::nlohmann_json
 )

@@ -11,6 +11,7 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/_timeval.h
  C:/msys64/mingw64/include/assert.h
  C:/msys64/mingw64/include/c++/15.2.0/algorithm
+ C:/msys64/mingw64/include/c++/15.2.0/any
  C:/msys64/mingw64/include/c++/15.2.0/array
  C:/msys64/mingw64/include/c++/15.2.0/backward/auto_ptr.h
  C:/msys64/mingw64/include/c++/15.2.0/backward/binders.h
@@ -43,15 +44,21 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/15.2.0/bits/exception_defines.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/formatfwd.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/forward_list.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/forward_list.tcc
  C:/msys64/mingw64/include/c++/15.2.0/bits/fs_dir.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/fs_fwd.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/fs_ops.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/fs_path.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/fstream.tcc
  C:/msys64/mingw64/include/c++/15.2.0/bits/functexcept.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/gslice.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/gslice_array.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/hash_bytes.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/hashtable.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/hashtable_policy.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/indirect_array.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/invoke.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/istream.tcc
@@ -64,6 +71,7 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets_nonio.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets_nonio.tcc
  C:/msys64/mingw64/include/c++/15.2.0/bits/localefwd.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/mask_array.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/max_size_type.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/memory_resource.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/memoryfwd.h
@@ -94,9 +102,11 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_atomic.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_base.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/slice_array.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/specfun.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/sstream.tcc
  C:/msys64/mingw64/include/c++/15.2.0/bits/std_abs.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/std_function.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/std_mutex.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_algo.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_algobase.h
@@ -108,6 +118,8 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_map.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_multimap.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_multiset.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_numeric.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/stl_pair.h
@@ -133,6 +145,10 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/15.2.0/bits/uses_allocator.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/uses_allocator_args.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/utility.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/valarray_after.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/valarray_array.h
+ C:/msys64/mingw64/include/c++/15.2.0/bits/valarray_array.tcc
+ C:/msys64/mingw64/include/c++/15.2.0/bits/valarray_before.h
  C:/msys64/mingw64/include/c++/15.2.0/bits/vector.tcc
  C:/msys64/mingw64/include/c++/15.2.0/bits/version.h
  C:/msys64/mingw64/include/c++/15.2.0/bitset
@@ -150,6 +166,7 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/15.2.0/cstdint
  C:/msys64/mingw64/include/c++/15.2.0/cstdio
  C:/msys64/mingw64/include/c++/15.2.0/cstdlib
+ C:/msys64/mingw64/include/c++/15.2.0/cstring
  C:/msys64/mingw64/include/c++/15.2.0/ctime
  C:/msys64/mingw64/include/c++/15.2.0/cwchar
  C:/msys64/mingw64/include/c++/15.2.0/cwctype
@@ -166,6 +183,9 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/15.2.0/ext/type_traits.h
  C:/msys64/mingw64/include/c++/15.2.0/filesystem
  C:/msys64/mingw64/include/c++/15.2.0/format
+ C:/msys64/mingw64/include/c++/15.2.0/forward_list
+ C:/msys64/mingw64/include/c++/15.2.0/fstream
+ C:/msys64/mingw64/include/c++/15.2.0/functional
  C:/msys64/mingw64/include/c++/15.2.0/initializer_list
  C:/msys64/mingw64/include/c++/15.2.0/iomanip
  C:/msys64/mingw64/include/c++/15.2.0/ios
@@ -175,6 +195,7 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/15.2.0/iterator
  C:/msys64/mingw64/include/c++/15.2.0/limits
  C:/msys64/mingw64/include/c++/15.2.0/locale
+ C:/msys64/mingw64/include/c++/15.2.0/map
  C:/msys64/mingw64/include/c++/15.2.0/memory
  C:/msys64/mingw64/include/c++/15.2.0/new
  C:/msys64/mingw64/include/c++/15.2.0/numbers
@@ -188,6 +209,7 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/15.2.0/pstl/pstl_config.h
  C:/msys64/mingw64/include/c++/15.2.0/queue
  C:/msys64/mingw64/include/c++/15.2.0/random
+ C:/msys64/mingw64/include/c++/15.2.0/ranges
  C:/msys64/mingw64/include/c++/15.2.0/ratio
  C:/msys64/mingw64/include/c++/15.2.0/set
  C:/msys64/mingw64/include/c++/15.2.0/span
@@ -217,11 +239,15 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/15.2.0/unordered_map
  C:/msys64/mingw64/include/c++/15.2.0/unordered_set
  C:/msys64/mingw64/include/c++/15.2.0/utility
+ C:/msys64/mingw64/include/c++/15.2.0/valarray
  C:/msys64/mingw64/include/c++/15.2.0/variant
  C:/msys64/mingw64/include/c++/15.2.0/vector
+ C:/msys64/mingw64/include/c++/15.2.0/version
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++allocator.h
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++locale.h
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_base.h
@@ -255,6 +281,7 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/sdks/_mingw_ddk.h
  C:/msys64/mingw64/include/sec_api/stdio_s.h
  C:/msys64/mingw64/include/sec_api/stdlib_s.h
+ C:/msys64/mingw64/include/sec_api/string_s.h
  C:/msys64/mingw64/include/sec_api/sys/timeb_s.h
  C:/msys64/mingw64/include/sec_api/wchar_s.h
  C:/msys64/mingw64/include/signal.h
@@ -262,6 +289,7 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/stdint.h
  C:/msys64/mingw64/include/stdio.h
  C:/msys64/mingw64/include/stdlib.h
+ C:/msys64/mingw64/include/string.h
  C:/msys64/mingw64/include/swprintf.inl
  C:/msys64/mingw64/include/sys/timeb.h
  C:/msys64/mingw64/include/sys/types.h
@@ -293,6 +321,8 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/Dev/eliott-engine-projects/eliott-evolution/include/evolution/Components/Transform.hpp
  C:/Dev/eliott-engine-projects/eliott-evolution/include/evolution/Components/Vision.hpp
  C:/Dev/eliott-engine-projects/eliott-evolution/include/evolution/Components/Vitals.hpp
+ C:/Dev/eliott-engine-projects/eliott-evolution/include/evolution/Species/Species.hpp
+ C:/Dev/eliott-engine-projects/eliott-evolution/include/evolution/Species/SpeciesSerializer.hpp
  C:/Dev/eliott-engine-projects/eliott-evolution/include/evolution/Systems/MovementSystem.hpp
  C:/Dev/eliott-engine-projects/eliott-evolution/include/evolution/Systems/NeuralSystem.hpp
  C:/Dev/eliott-engine-projects/eliott-evolution/include/evolution/Systems/SimulationSystem.hpp
@@ -376,4 +406,50 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
  C:/Dev/vcpkg/installed/x64-mingw-static/include/SFML/Window/WindowBase.inl
  C:/Dev/vcpkg/installed/x64-mingw-static/include/SFML/Window/WindowEnums.hpp
  C:/Dev/vcpkg/installed/x64-mingw-static/include/SFML/Window/WindowHandle.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/adl_serializer.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/byte_container_with_subtype.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/abi_macros.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/conversions/from_json.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/conversions/to_chars.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/conversions/to_json.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/exceptions.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/hash.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/input/binary_reader.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/input/input_adapters.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/input/json_sax.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/input/lexer.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/input/parser.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/input/position_t.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/iterators/internal_iterator.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/iterators/iter_impl.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/iterators/iteration_proxy.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/iterators/iterator_traits.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/iterators/primitive_iterator.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/json_custom_base_class.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/json_pointer.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/json_ref.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/macro_scope.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/macro_unscope.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/call_std/begin.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/call_std/end.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/cpp_future.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/detected.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/identity_tag.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/is_sax.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/std_fs.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/type_traits.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/meta/void_t.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/output/binary_writer.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/output/output_adapters.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/output/serializer.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/string_concat.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/string_escape.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/string_utils.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/detail/value_t.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/json.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/json_fwd.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/ordered_map.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/thirdparty/hedley/hedley.hpp
+ C:/Dev/vcpkg/installed/x64-mingw-static/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
 
