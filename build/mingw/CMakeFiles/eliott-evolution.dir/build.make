@@ -85,14 +85,46 @@ CMakeFiles/eliott-evolution.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eliott-evolution.dir/src/main.cpp.s"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Dev\eliott-engine-projects\eliott-evolution\src\main.cpp -o CMakeFiles\eliott-evolution.dir\src\main.cpp.s
 
+CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.obj: CMakeFiles/eliott-evolution.dir/flags.make
+CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.obj: C:/Dev/eliott-engine-projects/eliott-evolution/src/Simulation.cpp
+CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.obj: CMakeFiles/eliott-evolution.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.obj -MF CMakeFiles\eliott-evolution.dir\src\Simulation.cpp.obj.d -o CMakeFiles\eliott-evolution.dir\src\Simulation.cpp.obj -c C:\Dev\eliott-engine-projects\eliott-evolution\src\Simulation.cpp
+
+CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Dev\eliott-engine-projects\eliott-evolution\src\Simulation.cpp > CMakeFiles\eliott-evolution.dir\src\Simulation.cpp.i
+
+CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Dev\eliott-engine-projects\eliott-evolution\src\Simulation.cpp -o CMakeFiles\eliott-evolution.dir\src\Simulation.cpp.s
+
+CMakeFiles/eliott-evolution.dir/src/App.cpp.obj: CMakeFiles/eliott-evolution.dir/flags.make
+CMakeFiles/eliott-evolution.dir/src/App.cpp.obj: C:/Dev/eliott-engine-projects/eliott-evolution/src/App.cpp
+CMakeFiles/eliott-evolution.dir/src/App.cpp.obj: CMakeFiles/eliott-evolution.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/eliott-evolution.dir/src/App.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eliott-evolution.dir/src/App.cpp.obj -MF CMakeFiles\eliott-evolution.dir\src\App.cpp.obj.d -o CMakeFiles\eliott-evolution.dir\src\App.cpp.obj -c C:\Dev\eliott-engine-projects\eliott-evolution\src\App.cpp
+
+CMakeFiles/eliott-evolution.dir/src/App.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eliott-evolution.dir/src/App.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Dev\eliott-engine-projects\eliott-evolution\src\App.cpp > CMakeFiles\eliott-evolution.dir\src\App.cpp.i
+
+CMakeFiles/eliott-evolution.dir/src/App.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eliott-evolution.dir/src/App.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Dev\eliott-engine-projects\eliott-evolution\src\App.cpp -o CMakeFiles\eliott-evolution.dir\src\App.cpp.s
+
 # Object files for target eliott-evolution
 eliott__evolution_OBJECTS = \
-"CMakeFiles/eliott-evolution.dir/src/main.cpp.obj"
+"CMakeFiles/eliott-evolution.dir/src/main.cpp.obj" \
+"CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.obj" \
+"CMakeFiles/eliott-evolution.dir/src/App.cpp.obj"
 
 # External object files for target eliott-evolution
 eliott__evolution_EXTERNAL_OBJECTS =
 
 eliott-evolution.exe: CMakeFiles/eliott-evolution.dir/src/main.cpp.obj
+eliott-evolution.exe: CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.obj
+eliott-evolution.exe: CMakeFiles/eliott-evolution.dir/src/App.cpp.obj
 eliott-evolution.exe: CMakeFiles/eliott-evolution.dir/build.make
 eliott-evolution.exe: C:/Dev/vcpkg/installed/x64-mingw-static/debug/lib/libsfml-graphics-s-d.a
 eliott-evolution.exe: extern/eliott-ecs/libeliott-ecs.a
@@ -110,7 +142,7 @@ eliott-evolution.exe: C:/Dev/vcpkg/installed/x64-mingw-static/debug/lib/libbrotl
 eliott-evolution.exe: CMakeFiles/eliott-evolution.dir/linkLibs.rsp
 eliott-evolution.exe: CMakeFiles/eliott-evolution.dir/objects1.rsp
 eliott-evolution.exe: CMakeFiles/eliott-evolution.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable eliott-evolution.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable eliott-evolution.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\eliott-evolution.dir\link.txt --verbose=$(VERBOSE)
 	C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Dev/eliott-engine-projects/eliott-evolution/build/mingw/eliott-evolution.exe -installedDir C:/Dev/vcpkg/installed/x64-mingw-static/debug/bin -OutVariable out
 

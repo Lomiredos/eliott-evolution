@@ -39,6 +39,11 @@ public:
         m_foodSystem = _food;
     }
 
+    void initHistory(const std::vector<float>& _fitnessMax, const std::vector<float>& _fitnessMin) {
+        m_fitnessMax = _fitnessMax;
+        m_fitnessMin = _fitnessMin;
+    }
+
     void update(ee::ecs::World& _world, float _dt) override {
 
         m_timer += _dt;
@@ -91,6 +96,7 @@ public:
 
 
 int getGeneration() const { return m_generation; }
+void setGeneration(int _gen) { m_generation = _gen; }
 float getTimer() const { return m_timer; }
 float getGenerationTime() const { return m_generationTime; }
 std::vector<float> getFitnessMax() const { return m_fitnessMax; }
@@ -153,7 +159,7 @@ private:
         _world.addComponent(creature, child);
     }
 
-    for (int i = 0; i < 10; i++){
+    for (int i = 0; i < 30; i++){
         ee::ecs::EntityID food = _world.createEntity();
         _world.addComponent(food, Transform{ sf::Vector2f(distX(m_rng), distY(m_rng)) });
         _world.addComponent(food, Food{});

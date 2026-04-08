@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/eliott-evolution.dir/src/App.cpp.obj"
+  "CMakeFiles/eliott-evolution.dir/src/App.cpp.obj.d"
+  "CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.obj"
+  "CMakeFiles/eliott-evolution.dir/src/Simulation.cpp.obj.d"
   "CMakeFiles/eliott-evolution.dir/src/main.cpp.obj"
   "CMakeFiles/eliott-evolution.dir/src/main.cpp.obj.d"
   "eliott-evolution.exe"

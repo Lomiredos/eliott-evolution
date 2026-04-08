@@ -14,6 +14,8 @@ add_subdirectory(extern/eliott-ecs)
 
 add_executable(eliott-evolution
     src/main.cpp
+    src/Simulation.cpp
+    src/App.cpp
 )
 
 target_include_directories(eliott-evolution PUBLIC

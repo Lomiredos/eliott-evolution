@@ -106,12 +106,12 @@ extern/eliott-ecs/clean: extern/eliott-ecs/CMakeFiles/eliott-ecs.dir/clean
 CMakeFiles/eliott-evolution.dir/all: extern/eliott-ecs/CMakeFiles/eliott-ecs.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\eliott-evolution.dir\build.make CMakeFiles/eliott-evolution.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\eliott-evolution.dir\build.make CMakeFiles/eliott-evolution.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles --progress-num=3,4 "Built target eliott-evolution"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles --progress-num=3,4,5,6 "Built target eliott-evolution"
 .PHONY : CMakeFiles/eliott-evolution.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/eliott-evolution.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/eliott-evolution.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles 0
 .PHONY : CMakeFiles/eliott-evolution.dir/rule
@@ -123,7 +123,7 @@ eliott-evolution: CMakeFiles/eliott-evolution.dir/rule
 # codegen rule for target.
 CMakeFiles/eliott-evolution.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\eliott-evolution.dir\build.make CMakeFiles/eliott-evolution.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles --progress-num=3,4 "Finished codegen for target eliott-evolution"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Dev\eliott-engine-projects\eliott-evolution\build\mingw\CMakeFiles --progress-num=3,4,5,6 "Finished codegen for target eliott-evolution"
 .PHONY : CMakeFiles/eliott-evolution.dir/codegen
 
 # clean rule for target.
