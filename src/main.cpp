@@ -35,6 +35,7 @@ Systems setUpSystem(ee::ecs::World& world){
     auto moveSys = world.registerSystem<MovementSystem>();
     auto neuralSys = world.registerSystem<NeuralSystem>();
     auto simSys = world.registerSystem<SimulationSystem>();
+    simSys->init(foodSys);
 
 Systems sys{moveSys, visionSys, neuralSys, simSys, foodSys, wallSys};
 
@@ -62,6 +63,10 @@ Systems sys{moveSys, visionSys, neuralSys, simSys, foodSys, wallSys};
         sig.reset();
     sig.set(ee::ecs::getComponentID<Wall>());
     world.setSystemSignature<WallSystem>(sig);
+
+    sig.reset();
+sig.set(ee::ecs::getComponentID<NeuralNetwork>());
+world.setSystemSignature<SimulationSystem>(sig);
 
 
     return sys;
@@ -152,6 +157,10 @@ int main()
     }
 
 	dt = std::min(clock.restart().asSeconds(), 0.05f);
+
+    //clear des entité morte
+    world.flushDestructions();
+
 
     //update
     sys.vision->update(world, dt);

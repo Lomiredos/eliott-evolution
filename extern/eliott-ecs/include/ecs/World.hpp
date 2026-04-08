@@ -4,6 +4,7 @@
 #include "SystemManager.hpp"
 #include <unordered_map>
 
+#include <vector>
 
 namespace ee::ecs {
     class World{
@@ -14,12 +15,24 @@ namespace ee::ecs {
         EntityManager m_entityManager;
         SystemManager m_sysManager;
         std::unordered_map<EntityID, Signature> m_signatures;
+        std::vector<EntityID> m_toDestroy;
     
         public:
         EntityID createEntity() {
             return m_entityManager.createEntity();
 
         }
+
+        void markForDestruction(EntityID _id) {
+            m_toDestroy.push_back(_id);
+        }
+
+        void flushDestructions() {
+            for (EntityID id : m_toDestroy)
+                destroyEntity(id);
+            m_toDestroy.clear();
+        }
+
         void destroyEntity(EntityID _id) {
             
             m_sysManager.onEntityDestroyed(_id);
