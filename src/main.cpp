@@ -26,6 +26,17 @@ struct Systems {
     std::shared_ptr<WallSystem> wall;
 };
 
+void drawText(sf::RenderWindow& win, const sf::Font& font, 
+              const std::string& str, float x, float y, sf::Color color = sf::Color::White) {
+    sf::Text text(font);
+    text.setString(str);
+    text.setCharacterSize(18);
+    text.setFillColor(color);
+    text.setPosition({x, y});
+    win.draw(text);
+}
+
+
 
 Systems setUpSystem(ee::ecs::World& world){
     auto foodSys = world.registerSystem<FoodSystem>();
@@ -91,7 +102,7 @@ void createEntity(ee::ecs::World& world, std::shared_ptr<SimulationSystem> simSy
     for (int i = 0; i < 20; i++){
         ee::ecs::EntityID creature = world.createEntity();
         world.addComponent(creature, Transform{ sf::Vector2f(distX(rng), distY(rng)) });
-        world.addComponent(creature, Motion{ distDir(rng), 90.f, 0.f, 150.f });
+        world.addComponent(creature, Motion{0.f, 90.f, 0.f, 150.f });
         world.addComponent(creature, Vitals{ 100.f, 100.f, 0.f });
         std::vector<Ray> rays;
         for (int i = -2; i <= 2; i++){
@@ -139,8 +150,13 @@ int main()
 
     float timeScale = 5.f;
     //sf part
-    sf::RenderWindow window =  sf::RenderWindow(sf::VideoMode({1280u, 720u}), "Evolution");
+    sf::RenderWindow window(sf::VideoMode({1280u, 720u}), "Evolution");
     window.setFramerateLimit(60);
+
+    sf::RenderWindow statsWindow(sf::VideoMode({400u, 600u}), "Stats");
+    sf::Font font;
+    font.openFromFile("C:/Windows/Fonts/arial.ttf");
+
     sf::Clock clock;
 
     float dt;
@@ -156,6 +172,9 @@ int main()
     //input
     while (const std::optional event = window.pollEvent()) {
         if (event->is<sf::Event::Closed>()) window.close();
+    }
+    while (const std::optional event = statsWindow.pollEvent()) {
+    if (event->is<sf::Event::Closed>()) statsWindow.close();
     }
 
 	dt = std::min(clock.restart().asSeconds(), 0.05f);
@@ -248,9 +267,23 @@ int main()
     window.display();
 
 
+    statsWindow.clear();
+
+
+    std::string text = "Generation: " + std::to_string(sys.sim->getGeneration());
+    drawText(statsWindow, font, text, 40, 50);
+    
+    text = "Time Factors :" + std::to_string(timeScale);
+    drawText(statsWindow, font, text, 40, 100);
+
+    text = "Time :" + std::to_string(sys.sim->getTimer()) +"/" +std::to_string(sys.sim->getGenerationTime());
+    drawText(statsWindow, font, text, 40, 150);
+
+
+    statsWindow.display();
+
+
+
     }
-
-
-
     return 0;
 }
