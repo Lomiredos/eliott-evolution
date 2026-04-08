@@ -68,20 +68,62 @@ Systems sys{moveSys, visionSys, neuralSys, simSys, foodSys, wallSys};
 }
 
 void createEntity(ee::ecs::World& world, std::shared_ptr<SimulationSystem> simSys){
-ee::ecs::EntityID food = world.createEntity();
-world.addComponent(food, Transform{ sf::Vector2f(400.f, 300.f) });
-world.addComponent(food, Food{});
 
-ee::ecs::EntityID creature = world.createEntity();
-world.addComponent(creature, Transform{ sf::Vector2f(100.f, 100.f) });
-world.addComponent(creature, Motion{ 0.f, 90.f, 0.f, 150.f });
-world.addComponent(creature, Vitals{ 100.f, 100.f, 0.f });
-std::vector<Ray> rays;
-for (int i = -2; i <= 2; i++){
-    rays.push_back(Ray{100.f, (float)(i * 30), 100.f, DetectedType::Nothing});
-}
-world.addComponent(creature, Vision{rays});
- world.addComponent(creature, simSys->createRandom({5, 8, 2}));
+    std::mt19937 rng(std::random_device{}());
+    std::uniform_real_distribution<float> distX(50.f, 1230.f);
+    std::uniform_real_distribution<float> distY(50.f, 670.f);
+    std::uniform_real_distribution<float> distDir(0.f, 360.f);
+
+
+    //Foods
+    for (int i = 0; i < 10; i++){
+        ee::ecs::EntityID food = world.createEntity();
+        world.addComponent(food, Transform{ sf::Vector2f(distX(rng), distY(rng)) });
+        world.addComponent(food, Food{});
+    }
+
+    //Creature
+    for (int i = 0; i < 20; i++){
+        ee::ecs::EntityID creature = world.createEntity();
+        world.addComponent(creature, Transform{ sf::Vector2f(distX(rng), distY(rng)) });
+        world.addComponent(creature, Motion{ distDir(rng), 90.f, 0.f, 150.f });
+        world.addComponent(creature, Vitals{ 100.f, 100.f, 0.f });
+        std::vector<Ray> rays;
+        for (int i = -2; i <= 2; i++){
+            rays.push_back(Ray{100.f, (float)(i * 30), 100.f, DetectedType::Nothing});
+        }
+        world.addComponent(creature, Vision{rays});
+        world.addComponent(creature, simSys->createRandom({5, 8, 2}));
+    }
+
+    //Walls
+    //Haut
+    for (int x = 0; x < 1280; x+= 20){
+        ee::ecs::EntityID wall = world.createEntity();
+        world.addComponent(wall, Transform{ sf::Vector2f(x, 0) });
+        world.addComponent(wall, Wall{});
+    }
+    //Bas
+    for (int x = 0; x < 1280; x+= 20){
+        ee::ecs::EntityID wall = world.createEntity();
+        world.addComponent(wall, Transform{ sf::Vector2f(x, 720) });
+        world.addComponent(wall, Wall{});
+    }
+    //Gauche
+    for (int y = 0; y < 720; y+= 20){
+        ee::ecs::EntityID wall = world.createEntity();
+        world.addComponent(wall, Transform{ sf::Vector2f(0, y) });
+        world.addComponent(wall, Wall{});
+    }
+
+    //Droite
+    for (int y = 0; y < 720; y+= 20){
+        ee::ecs::EntityID wall = world.createEntity();
+        world.addComponent(wall, Transform{ sf::Vector2f(1280, y) });
+        world.addComponent(wall, Wall{});
+    }
+
+
 
 }
 
@@ -127,6 +169,14 @@ int main()
         circle.setFillColor(sf::Color::Green);
         circle.setPosition(transform.position - sf::Vector2f(8.f, 8.f));
         window.draw(circle);
+    }
+
+    for (ee::ecs::EntityID id : sys.wall->m_entities){
+        Transform transform = world.getComponent<Transform>(id);
+        sf::RectangleShape rect({20., 20.});
+        rect.setFillColor(sf::Color(100, 100, 100));
+        rect.setPosition(transform.position - sf::Vector2f(20.f, 20.f));
+        window.draw(rect);
     }
 
     for (ee::ecs::EntityID id : sys.move->m_entities){
